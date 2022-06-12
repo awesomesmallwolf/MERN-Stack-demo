@@ -1,5 +1,5 @@
 # fullstackdemo
-mi proyecto para participar en xaldigital
+## mi proyecto para participar en xaldigital
 
 ## gracias por visitar este repo
 
