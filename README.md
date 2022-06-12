@@ -23,9 +23,9 @@ las imagenes que se van a crear son las siguientes:
 open the browser and go to http://localhost:82/
 
 ## entrar al back-end
-open the browser and go to http://localhost:84/
+open the browser and go to http://localhost:83/
 
 ## ver el swagger de la api
-open the browser and go to http://localhost:84/api/docs/swagger
+open the browser and go to http://localhost:83/api/docs/swagger
 ## thanks for visiting this repository
 
