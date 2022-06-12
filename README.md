@@ -8,7 +8,8 @@ my fullstack project to participate in  xaldigital
 ## how to run
 
 to run local with docker compose
-- docker compose up at root directory
+- open cmd console at root folder
+- docker-compose up --build
 - wait for it to finish creating all the images
 
 las imagenes que se van a crear son las siguientes:

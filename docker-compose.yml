@@ -43,9 +43,7 @@ services:
       - xal-digital
     environment:
       FLASK_ENV: development
-      DB_USERS_IP: 1.0.0.0
-      DB_USERS_USER: admin
-      DB_USER_PASS: admin
+      DB_CONN_STRING: mongodb+srv://user_dev:s4YDLwExGsQmibMK@freecluster.9td3h.mongodb.net/xaldigital?retryWrites=true&w=majority
     depends_on:
       - mongo
   mongo:
