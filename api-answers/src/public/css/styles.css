@@ -1,0 +1,41 @@
+* {
+    font-family: 'Alegreya Sans', sans-serif;
+    line-height: .10rem;
+}
+
+.theme-dark {
+    --background: #0f172a;
+    --title: #94a3b8;
+    --subtitle: #e2e8f0;
+    --white: #e2e8f0;
+}
+
+body {
+    background-color: var(--background);
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.title {
+    color: var(--title);
+    font-size: 3rem;
+}
+.middle {
+    color: var(--subtitle);
+    font-size: 1.5rem;
+}
+.subtitle {
+    color: var(--subtitle);
+    font-size: 2rem;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.white {
+    color: var(--white);
+}

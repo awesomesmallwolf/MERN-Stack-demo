@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="2.538">
+  <testsuite name="insert" errors="0" failures="0" skipped="0" timestamp="2022-06-09T17:30:31" time="2.458" tests="1">
+    <testcase classname="insert should insert a doc into collection" name="insert should insert a doc into collection" time="0.624">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,15 @@
+{
+    "name": "api-products",
+    "version": "1.0.0",
+    "description": "the tooly-fans users api",
+    "main": "src/server.js",
+    "author": "jguillendev@gmail.com",
+    "license": "MIT",
+    "scripts": {
+      "start": "node src/server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.3",
+      "prom-client": "^14.0.1"
+    }
+  }

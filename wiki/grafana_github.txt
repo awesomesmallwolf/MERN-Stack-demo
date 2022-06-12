@@ -1,0 +1,26 @@
+
+
+crear public tokens
+https://github.com/settings/tokens
+
+
+GitHub Data Source
+https://grafana.com/grafana/plugins/grafana-github-datasource/
+git: https://github.com/grafana/github-datasource
+
+
+
+
+Tutoriales:
+
+https://grafana.com/blog/2020/09/21/how-we-use-the-grafana-github-plugin-to-track-outstanding-pull-requests/
+
+QueryType: Pull Requests
+Owner: jguillendev
+Query: is:open
+Repository: rm-monorepo
+Time Field: CreateAt
+
+Transform
+   - Seleccionar Reduce
+   - Calculations: Count

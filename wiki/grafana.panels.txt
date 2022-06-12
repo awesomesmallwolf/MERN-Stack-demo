@@ -1,0 +1,14 @@
+Prometheus DataSource - configuration
+https://grafana.com/docs/grafana/v7.5/datasources/prometheus/
+
+[GRAFANA - AGREGAR TABLEROS]
+//entrar a grafana y agregar data source: prometheus
+
+//agregar paneles
+GAUGE: rate(api_calls{job="api-products"}[1m]) * 60
+
+//agregar algunos dashboards predefinidos (solo si queremos)
+Dashboard Codes: 11074 - 12559 - 9614
+in: input
+b: button
+menu>import> in:12559 [b:LOAD] > [b:IMPORT]
