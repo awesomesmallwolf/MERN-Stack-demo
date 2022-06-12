@@ -20,24 +20,23 @@ the images that will be created are the following:
 - grafana: grafana dashboard to display metrics
 
 # All ready? - go to enjoy :vulcan_salute:
-## entrar al front-end :joystick:
+## enter the front-end :joystick:
 open the browser and go to http://localhost:82/ :footprints:
 
-## entrar al back-end :star2:
+## enter the back-end :star2:
 open the browser and go to http://localhost:83/ :footprints:
 
-## ver el swagger de la api :yarn:
+## see the api swagger documentation :yarn:
 open the browser and go to http://localhost:83/api/docs/swagger :footprints:
 
-
 # test? yes sure! :hammer_and_wrench:
-pruebas de api :mage:
-- entrar a la carpeta api-answers  (cd api-answers) :footprints:
-- ejecutar: npm run test :crossed_fingers:
+api tests :mage:
+- enter the folder api-answers  (cd api-answers) :footprints:
+- run: npm run test :crossed_fingers:
 
-pruebas de front :mage:
-- entrar a la carpeta xald-app  (cd xald-app) :footprints:
-- ejecutar: npm test :crossed_fingers:
+front tests :mage:
+- enter the folder xald-app  (cd xald-app) :footprints:
+- run: npm test :crossed_fingers:
 
 #
 ## thanks for visiting this repository :clap: :clap:
