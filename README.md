@@ -32,12 +32,12 @@ open the browser and go to http://localhost:83/api/docs/swagger :footprints:
 
 # test? yes sure! :hammer_and_wrench:
 pruebas de api :mage:
-entrar a la carpeta api-answers  (cd api-answers) :footprints:
-ejecutar: npm run test :crossed_fingers:
+- entrar a la carpeta api-answers  (cd api-answers) :footprints:
+- ejecutar: npm run test :crossed_fingers:
 
 pruebas de front :mage:
-entrar a la carpeta xald-app  (cd xald-app) :footprints:
-ejecutar: npm test :crossed_fingers:
+- entrar a la carpeta xald-app  (cd xald-app) :footprints:
+- ejecutar: npm test :crossed_fingers:
 
 #
 ## thanks for visiting this repository :clap: :clap:
