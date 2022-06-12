@@ -1,14 +1,17 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { AdminHomePage } from './AdminHomePage';
 import { AnswersPage } from './answers/AnswersPage';
 import { AirportsPage } from './airports/AirportsPage';
 
 const AdminRoutes = () => {
 
+    let location = useLocation();
+    let state = location.state as { backgroundLocation?: Location };
+    console.log("location.state: ", location.state);
     console.log("IN PRIVATE:ROUTES");
     
     return (
-        <Routes>
+        <Routes  location={state?.backgroundLocation || location}>
             <Route path="/" element={<AdminHomePage/>} />
             <Route path="/answers" element={<AnswersPage/>} />
             <Route path="/airports" element={<AirportsPage/>} />

@@ -56,7 +56,7 @@ export const HelpBanner = () =>{
     return <div className="text-center pb-6">
         {
             isLoading 
-            ? <p>cargando</p>
+            ? <p className="text-xl text-yellow-500">cargando</p>
             : <React.Fragment>
                 <p className="leading-tight text-orange-500">crees que los datos no son correctos?</p>
                 <p className="text-blue-200 text-lg leading-tight">prueba a <button className="font-bold cursor-pointer text-green-600"

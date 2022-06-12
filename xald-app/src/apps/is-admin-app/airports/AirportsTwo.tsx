@@ -1,4 +1,3 @@
-import { useLayoutEffect } from "react";
 import { config } from "../../../configuration/config";
 import { Counter } from "../../../shared/components/Counter";
 import { ErrorCard } from "../../../shared/components/ErrorCard";
@@ -20,8 +19,6 @@ export const AirportsTwo = () =>{
         url:`${config.apis.airports.url}/two`
     });
     
-    useLayoutEffect(()=>{},[data]);
-
     return <div className="bg-gray-200 shadow-md py-3 px-3 rounded-md">
         <p className="text-sm text-gray-400">Aerolinea(s) con <strong className="text-gray-600">mayor número vuelos</strong> durante el año</p>
         {
