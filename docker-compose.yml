@@ -16,20 +16,6 @@ services:
       - REACT_APP_VERSION=2.0.0-compose
       - REACT_APP_API_ANSWERS=http://localhost:84/api/answers
       - REACT_APP_API_AIRPORTS=http://localhost:84/api/airports
-  api-products:
-    build:
-      context: ./api-products
-    container_name: c-api-products
-    image: api-products
-    ports:
-      - "83:5000"
-    networks:
-      - xal-digital
-    environment:
-      FLASK_ENV: development
-      DB_USERS_IP: 1.0.0.0
-      DB_USERS_USER: admin
-      DB_USER_PASS: admin
   api-answers:
     build:
       context: ./api-answers
@@ -38,29 +24,14 @@ services:
     env_file:
       - ./api-answers/.env
     ports:
-      - "84:5000"
+      - "83:5000"
     networks:
       - xal-digital
     environment:
       FLASK_ENV: development
-      DB_USERS_IP: 1.0.0.0
-      DB_USERS_USER: admin
-      DB_USER_PASS: admin
+      DB_CONN_STRING: mongodb+srv://user_dev:s4YDLwExGsQmibMK@freecluster.9td3h.mongodb.net/xaldigital?retryWrites=true&w=majority
     depends_on:
       - mongo
-  mongo:
-    image: mongo
-    command: --serviceExecutor adaptive
-    restart: unless-stopped
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=admin
-    ports:
-      - "3500:3500"
-    networks:
-      - xal-digital
-    volumes:
-      - mongo-data:/data/db 
   prometheus:
     build:
       context: ./my-prometheus
@@ -83,6 +54,3 @@ services:
 networks:
   xal-digital:
     driver: bridge
-volumes:
-  mongo-data:
-    driver: local

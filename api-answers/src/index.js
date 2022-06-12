@@ -2,7 +2,6 @@
 'use strict';
 
 //OBTIENES DEPENDENCIAS NECESARIAS PARA EJECUTAR TODO LO QUE HACE ESTE ARCHIVO
-require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const {registryMetrics} = require('./server-metrics');
@@ -56,7 +55,6 @@ const server = ExpressApp.listen(port, () => {
         console.error(err)
         process.exit(1)
       }
-  
-      process.exit(0)
+      process.exit(0);
     })
   })
