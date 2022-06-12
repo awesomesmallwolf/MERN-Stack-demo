@@ -1,9 +1,11 @@
 import {HeaderBar} from "../../shared/components/HeaderBar";
+import { PageFooter } from "../../shared/components/PageFooter";
 
 export const AdminHomePage = () => {
     return <main className="flex flex-col h-screen w-screen">
         <HeaderBar viewName="home"/>
         <HomeContent />
+        <PageFooter title="haz las cosas con amor, simpre!"/>
     </main>
 }
 

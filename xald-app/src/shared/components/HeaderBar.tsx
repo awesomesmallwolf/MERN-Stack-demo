@@ -24,9 +24,8 @@ export const HeaderBar = ({viewName}:IHeaderBar) =>{
         // @ts-ignore
         url: config.apis.airports.url
     });
-    console.log('headerBar:config: ', config);
 
-    return <head className="flex flex-col md:flex-row bg-slate-800 shadow-md sticky">
+    return <section className="flex flex-col md:flex-row bg-slate-800 shadow-md sticky">
         <div className="flex space-x-2 py-4 px-4">
             <img className="h-14 w-14 rounded-full border-green-400 border-4 object-cover" 
             alt="admin avatar"
@@ -58,5 +57,5 @@ export const HeaderBar = ({viewName}:IHeaderBar) =>{
                 }
             </ul>
         </div>
-    </head>
+    </section>
 }

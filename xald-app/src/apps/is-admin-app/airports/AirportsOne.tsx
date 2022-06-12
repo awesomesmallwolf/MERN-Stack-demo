@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import { config } from "../../../configuration/config";
 import { Counter } from "../../../shared/components/Counter";
 import { ErrorCard } from "../../../shared/components/ErrorCard";
@@ -11,13 +12,15 @@ type TraficAirport = {
     flights:number;
 }
 
-export const useAirportFour = (param: IRequest) => useHttpRequest<any,Array<TraficAirport>>(param);
+export const useAirportOne = (param: IRequest) => useHttpRequest<any,Array<TraficAirport>>(param);
 
 export const AirportsOne = () =>{
 
-    const {isLoading, data, error} = useAirportFour({
+    const {isLoading, data, error} = useAirportOne({
         url:`${config.apis.airports.url}/one`
     });
+
+    useLayoutEffect(()=>{},[data]);
 
     return <div className="bg-gray-200 shadow-md py-3 px-3 rounded-md">
         <p className="text-sm text-gray-400">Aeropuerto(s) con <strong className="text-gray-600">mayor tráfico</strong> en el año</p>

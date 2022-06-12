@@ -1,6 +1,7 @@
 
 export interface IRequest {
-    url:string
+    url:string;
+    auto?:boolean;
 }
 
 export interface IHttpError {

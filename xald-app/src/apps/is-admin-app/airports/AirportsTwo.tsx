@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import { config } from "../../../configuration/config";
 import { Counter } from "../../../shared/components/Counter";
 import { ErrorCard } from "../../../shared/components/ErrorCard";
@@ -11,16 +12,18 @@ type TraficAirline = {
     flights:number;
 }
 
-export const useAirportFour = (param: IRequest) => useHttpRequest<any,Array<TraficAirline>>(param);
+export const useAirportTwo = (param: IRequest) => useHttpRequest<any,Array<TraficAirline>>(param);
 
 export const AirportsTwo = () =>{
 
-    const {isLoading, data, error} = useAirportFour({
+    const {isLoading, data, error} = useAirportTwo({
         url:`${config.apis.airports.url}/two`
     });
+    
+    useLayoutEffect(()=>{},[data]);
 
     return <div className="bg-gray-200 shadow-md py-3 px-3 rounded-md">
-        <p className="text-sm text-gray-400">Aerolinea con <strong className="text-gray-600">mayor número vuelos</strong> durante el año</p>
+        <p className="text-sm text-gray-400">Aerolinea(s) con <strong className="text-gray-600">mayor número vuelos</strong> durante el año</p>
         {
             isLoading === false && data 
             ?   <div className="flex space-x-2 justify-center items-center py-2">
