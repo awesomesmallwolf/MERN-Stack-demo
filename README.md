@@ -13,11 +13,11 @@ to run local with docker compose
 - wait for it to finish creating all the images
 - be patient, it takes a while :sweat_smile: :snail: :snail:
 
-las imagenes que se van a crear son las siguientes:
+the images that will be created are the following:
 - xald-app : front-end react
 - api-answers: back-end node-express-mongo
-- my-prometheus: tablero de prometheus para metricas
-- grafana: tablero de grafana para mostrar metricas
+- my-prometheus: prometheus board for metrics
+- grafana: grafana dashboard to display metrics
 
 # All ready? - go to enjoy :vulcan_salute:
 ## entrar al front-end :joystick:
