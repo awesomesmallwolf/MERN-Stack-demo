@@ -37,6 +37,15 @@ router.get('/', (req, res) => {
         msg:"welcome to airports api"});
 })
 
+/** 
+ * @openapi
+ * /api/airports/initialize:
+ *   get:
+*      description: Inicializar los registros de la base de datos
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/initialize', async (req, res) => {
     try {
         const {error, message, data} = await initialize();
@@ -52,6 +61,15 @@ router.get('/initialize', async (req, res) => {
     }
 });
 
+/** 
+ * @openapi
+ * /api/airports/one:
+ *   get:
+*      description: ¿Cuál es el nombre aeropuerto que ha tenido mayor movimiento durante el año?
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/one', async (req, res) => {
     try {
         const {error, message, data} = await actionOne();
@@ -67,6 +85,15 @@ router.get('/one', async (req, res) => {
     }
 });
 
+/** 
+ * @openapi
+ * /api/airports/two:
+ *   get:
+*      description: ¿Cuál es el nombre aerolínea que ha realizado mayor número de vuelos durante el año?
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/two', async (req, res) => {
     try {
         const {error, message, data} = await actionTwo();
@@ -82,6 +109,15 @@ router.get('/two', async (req, res) => {
     }
 });
 
+/** 
+ * @openapi
+ * /api/airports/three:
+ *   get:
+*      description: ¿En qué día se han tenido mayor número de vuelos?
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/three', async (req, res) => {
     try {
         const {error, message, data} = await actionThree();
@@ -97,6 +133,15 @@ router.get('/three', async (req, res) => {
     }
 });
 
+/** 
+ * @openapi
+ * /api/airports/four:
+ *   get:
+*      description: ¿Cuáles son las aerolíneas que tienen mas de 2 vuelos por día?
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/four', async (req, res) => {
     try {
         const {error, message, data} = await actionFour();

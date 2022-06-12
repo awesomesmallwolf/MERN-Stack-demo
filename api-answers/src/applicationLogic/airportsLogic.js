@@ -170,7 +170,7 @@ const fourAsync = async () => {
     for (const [key, value] of groupedCounts.entries()) {
         console.log(key, value);
         //evaluar si tiene mas de 2 vuelos
-        const haveTwoFlights = value.find(v => v.flights >= 2);
+        const haveTwoFlights = value.find(v => v.flights > 2);
         if(haveTwoFlights){
             airlines.push({
                 id: haveTwoFlights.id,

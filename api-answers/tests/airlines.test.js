@@ -3,7 +3,7 @@ const {MongoClient} = require('mongodb');
 
 jest.setTimeout(8000)
 
-describe('insert', () => {
+describe('test airlines', () => {
     
     const connString = process.env.DB_CONN_STRING;
     let connection;
@@ -15,7 +15,7 @@ describe('insert', () => {
           useUnifiedTopology: true,
         });
         db = await connection.db();
-        db.collection('airlines').deleteMany({});
+        db.collection('test-airlines').deleteMany({});
     });
 
     afterAll(async () => {
@@ -23,7 +23,7 @@ describe('insert', () => {
     });
   
     it('should insert a doc into collection', async () => {
-      const airlines = db.collection('airlines');
+      const airlines = db.collection('test-airlines');
   
       await airlines.insertOne({
           _id: false,

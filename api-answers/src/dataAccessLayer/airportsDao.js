@@ -47,6 +47,7 @@ const initAirlinesAsync = async () =>{
     const d = await Flight.insertMany(flights);
 
     return {
+        version: new Date().getTime().toString(),
         airlines:a,
         airports:b,
         landings:c,

@@ -11,11 +11,11 @@ type TraficAirport = {
     flights:number;
 }
 
-export const useAirportFour = (param: IRequest) => useHttpRequest<any,Array<TraficAirport>>(param);
+export const useAirportOne = (param: IRequest) => useHttpRequest<any,Array<TraficAirport>>(param);
 
 export const AirportsOne = () =>{
 
-    const {isLoading, data, error} = useAirportFour({
+    const {isLoading, data, error} = useAirportOne({
         url:`${config.apis.airports.url}/one`
     });
 
