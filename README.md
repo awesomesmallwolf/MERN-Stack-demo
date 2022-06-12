@@ -32,5 +32,6 @@ open the browser and go to http://localhost:83/api/docs/swagger :footprints:
 
 #
 ## thanks for visiting this repository :clap: :clap:
-:ok_hand: :love_you_gesture: :heart: :sunglasses:
+do things with love and you will always get great satisfaction :heart: :heart:
+:ok_hand: :love_you_gesture: :sunglasses:
 
