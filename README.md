@@ -1,4 +1,4 @@
-# fullstack demo
+# fullstack demo :wave:
 my fullstack project to participate in  xaldigital
 
 # pre requirements
