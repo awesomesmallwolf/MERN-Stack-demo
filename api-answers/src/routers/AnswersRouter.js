@@ -37,6 +37,15 @@ router.get('/', (req, res) => {
         msg:"welcome to answers api"});
 })
 
+/** 
+ * @openapi
+ * /api/answers/one:
+ *   get:
+*      description: Obtener el número de respuestas contestadas y no contestadas
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/one', async (req, res) => {
     try {
         const {error, message, data} = await actionOne();
@@ -52,6 +61,15 @@ router.get('/one', async (req, res) => {
     }
 })
 
+/** 
+ * @openapi
+ * /api/answers/two:
+ *   get:
+*      description: Obtener la respuesta con mayor reputación
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/two', async (req, res) => {
     try {
         const {error, message, data} = await actionTwo();
@@ -67,6 +85,15 @@ router.get('/two', async (req, res) => {
     }
 })
 
+/** 
+ * @openapi
+ * /api/answers/three:
+ *   get:
+*      description: Obtener la respuesta con menor número de vistas
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/three', async (req, res) => {
     try {
         const {error, message, data} = await actionThree();
@@ -82,6 +109,15 @@ router.get('/three', async (req, res) => {
     }
 })
 
+/** 
+ * @openapi
+ * /api/answers/four:
+ *   get:
+*      description: Obtener la respuesta más vieja y más actual
+*      responses:
+*        200:
+*          description: Success
+*/
 router.get('/four', async (req, res) => {
     try {
         const {error, message, data} = await actionFour();
