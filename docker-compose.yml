@@ -1,0 +1,88 @@
+version: "3"
+services:
+  xald-app:
+    build:
+      context: ./xald-app
+    container_name: c-xald-app
+    image: xald-app
+    stdin_open: true
+    ports: 
+      - 82:3000
+    networks:
+      - xal-digital
+    volumes:
+      - ".:/usr/src/app"
+    environment:
+      - REACT_APP_VERSION=2.0.0-compose
+      - REACT_APP_API_ANSWERS=http://localhost:84/api/answers
+      - REACT_APP_API_AIRPORTS=http://localhost:84/api/airports
+  api-products:
+    build:
+      context: ./api-products
+    container_name: c-api-products
+    image: api-products
+    ports:
+      - "83:5000"
+    networks:
+      - xal-digital
+    environment:
+      FLASK_ENV: development
+      DB_USERS_IP: 1.0.0.0
+      DB_USERS_USER: admin
+      DB_USER_PASS: admin
+  api-answers:
+    build:
+      context: ./api-answers
+    container_name: c-api-answers
+    image: api-answers
+    env_file:
+      - ./api-answers/.env
+    ports:
+      - "84:5000"
+    networks:
+      - xal-digital
+    environment:
+      FLASK_ENV: development
+      DB_USERS_IP: 1.0.0.0
+      DB_USERS_USER: admin
+      DB_USER_PASS: admin
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    command: --serviceExecutor adaptive
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    ports:
+      - "3500:3500"
+    networks:
+      - xal-digital
+    volumes:
+      - mongo-data:/data/db 
+  prometheus:
+    build:
+      context: ./my-prometheus
+    container_name: c-prometheus
+    image: my-prometheus
+    ports: 
+      - "9091:9090"
+    networks:
+      - xal-digital
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_AUTH_BASIC_ENABLED=false
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    networks:
+      - xal-digital
+networks:
+  xal-digital:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
