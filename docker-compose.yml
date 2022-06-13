@@ -13,6 +13,7 @@ services:
     volumes:
       - ".:/usr/src/app"
     environment:
+      - REACT_APP_ENV=production
       - REACT_APP_VERSION=2.0.0-compose
       - REACT_APP_API_ANSWERS=http://localhost:84/api/answers
       - REACT_APP_API_AIRPORTS=http://localhost:84/api/airports

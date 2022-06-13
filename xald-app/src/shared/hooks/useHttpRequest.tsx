@@ -20,11 +20,17 @@ export const useHttpRequest = <R,T>({url, auto=true }:IRequest): HookHttpRequest
     
     const onData = async (result:any)=>{
         const data =  await result.json();
+        console.log("useHttpRequest:onData:result ",  result);
+        if(result.status !== 200)
+        onError(data);
+        else
         setData(data);
+
         setIsLoading(false);
     }
 
     const onError = (result:any)=>{
+
         setError({
             status: result.status,
             statusText: result.statusText,
@@ -46,7 +52,7 @@ export const useHttpRequest = <R,T>({url, auto=true }:IRequest): HookHttpRequest
         .then(onData)
         .catch(onError);
 
-    },[url, error, auto]);
+    },[url, auto]);
 
     return { isLoading, data, error, send }
 }

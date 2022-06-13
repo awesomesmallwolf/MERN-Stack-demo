@@ -1,11 +1,11 @@
-import React from "react";
 import { IHttpError } from "../../apps/is-admin-app/interfaces/interfaces";
 
 interface IErrorCard {
     error: IHttpError
 }
 export const ErrorCard = ({error}:IErrorCard) =>{
-    return <div>
-        <pre>{JSON.stringify(error)}</pre>
+    console.log("errorCad:", error);
+    return <div className="text-gray-500">
+        <p className="text-orange-500 text-md font-bold">no obtuvimos datos del servidor</p>
     </div>
 }
