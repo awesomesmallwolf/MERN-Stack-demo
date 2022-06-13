@@ -16,11 +16,11 @@ export const AnswersThree = () =>{
     return <div className="bg-gray-200 shadow-md py-3 px-3 rounded-md">
         <p className="text-sm text-gray-400">respuesta con menor número de vistas</p>
         {
-            isLoading === false && data
-            ? <AnswerContent data={data}/> 
-            : <LoadingCard />
+            isLoading === false && data && 
+            <AnswerContent data={data}/>
         }
 
+        { isLoading && <LoadingCard /> }
         {
             isLoading === false && error && <ErrorCard error={error}/>
         }

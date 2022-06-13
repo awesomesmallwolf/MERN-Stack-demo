@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useLayoutEffect } from "react";
 import { config } from "../../../configuration/config";
 import { HeaderBar } from "../../../shared/components/HeaderBar";
@@ -28,12 +29,15 @@ export const AirportsPage = () => {
 }
 
 export const AirportsContent = () => {
-    return <section className="px-2 md:px-4 flex-1 flex flex-wrap gap-4 content-start justify-center">
+    return <motion.section className="px-2 md:px-4 flex-1 flex flex-wrap gap-4 content-start justify-center"
+        initial={{ y: 50, opacity: 0.20}}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1, y: { type: "spring" }, default: { duration: 0.25 }}}>
         <AirportsOne />
         <AirportsTwo />
         <AirportsThree />
         <AirportsFour />
-    </section>
+    </motion.section>
 }
 
 export const HelpBanner = () =>{
@@ -58,8 +62,8 @@ export const HelpBanner = () =>{
             isLoading 
             ? <p className="text-xl text-yellow-500">cargando</p>
             : <React.Fragment>
-                <p className="leading-tight text-orange-500">crees que los datos no son correctos?</p>
-                <p className="text-blue-200 text-lg leading-tight">prueba a <button className="font-bold cursor-pointer text-green-600"
+                <p className="leading-tight text-orange-600 font-semibold dark:font-normal dark:text-orange-500">crees que los datos no son correctos?</p>
+                <p className="text-blue-600 dark:text-blue-200 text-lg leading-tight">prueba a <button className="font-bold cursor-pointer text-green-600"
                 onClick={onRestartDb}>reiniciar</button> la db</p>    
             </React.Fragment>
         }

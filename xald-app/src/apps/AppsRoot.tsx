@@ -22,7 +22,7 @@ const AppsRoutes = ()=> {
                 checked:true,
             });
         },1500);
-    });
+    },[]);
 
 
     if(!authState.checked)

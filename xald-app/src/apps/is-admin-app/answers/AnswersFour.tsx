@@ -20,14 +20,14 @@ export const AnswersFour = () =>{
     return <div className="bg-gray-200 shadow-md py-3 px-3 rounded-md">
         <p className="text-sm text-gray-400 pb-2">respuesta más <strong className="text-slate-500">vieja</strong> y más <strong className="text-green-500">actual</strong></p>
         {
-            isLoading === false && data
-            ? <div className="flex flex-col space-y-2">
+            isLoading === false && data && 
+            <div className="flex flex-col space-y-2">
                 <AnswerContent data={data.oldest} className="bg-slate-300 rounded-md p-2"/> 
                 <AnswerContent data={data.newest} className="bg-green-200 rounded-md p-2"/> 
             </div>
-            : <LoadingCard />
         }
 
+        { isLoading && <LoadingCard /> }
         {
             isLoading === false && error && <ErrorCard error={error}/>
         }
