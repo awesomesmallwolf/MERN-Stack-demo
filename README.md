@@ -1,17 +1,17 @@
-# fullstack demo :wave:
-my fullstack project to participate in  xaldigital
+# fullstack demo
+This repo is for MERN Stack dev.
 
-# pre requirements :technologist:
+# pre requirements
 
 - you need to have docker installed
 
-# how to run :brain:
+# how to run
 
 to run local with docker compose
-- open cmd console at root folder :footprints:
-- docker-compose up --build :footprints:
+- open cmd console at root folder
+- docker-compose up --build
 - wait for it to finish creating all the images
-- be patient, it takes a while :sweat_smile: :snail: :snail:
+- be patient, it takes a while  
 
 the images that will be created are the following:
 - xald-app : front-end react
@@ -19,27 +19,25 @@ the images that will be created are the following:
 - my-prometheus: prometheus board for metrics
 - grafana: grafana dashboard to display metrics
 
-# All ready? - go to enjoy :vulcan_salute:
-## enter the front-end :joystick:
-open the browser and go to http://localhost:82/ :footprints:
+# All ready? - go to enjoy
+## enter the front-end
+open the browser and go to http://localhost:82/
 
-## enter the back-end :star2:
-open the browser and go to http://localhost:83/ :footprints:
+## enter the back-end
+open the browser and go to http://localhost:83/
 
-## see the api swagger documentation :yarn:
-open the browser and go to http://localhost:83/api/docs/swagger :footprints:
+## see the api swagger documentation
+open the browser and go to http://localhost:83/api/docs/swagger
 
-# test? yes sure! :hammer_and_wrench:
-api tests :mage:
-- enter the folder api-answers  (cd api-answers) :footprints:
-- run: npm run test :crossed_fingers:
+# test? yes sure!
+api tests
+- enter the folder api-answers  (cd api-answers)
+- run: npm run test
 
-front tests :mage:
-- enter the folder xald-app  (cd xald-app) :footprints:
-- run: npm test :crossed_fingers:
+front tests
+- enter the folder xald-app  (cd xald-app)
+- run: npm test
 
 #
-## thanks for visiting this repository :clap: :clap:
-do things with love and you will always get great satisfaction :heart: :heart:
-:ok_hand: :love_you_gesture: :sunglasses:
-
+## thanks for visiting this repository
+do things with love and you will always get great satisfaction :heart:
